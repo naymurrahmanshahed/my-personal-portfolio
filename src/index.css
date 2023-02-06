@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -67,4 +67,59 @@ body {
 
 .link-item:hover::after {
   width: 100%;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-img {
+  height: 350px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.shutter {
+  position: absolute;
+  z-index: 100;
+  font-family: "Cosi Azure", sans-serif;
+  font-size: 8rem;
+}
+
+.shutter-left {
+  top: 0;
+  left: 0;
+}
+
+.shutter-right {
+  bottom: 0;
+  right: 0;
+}
+
+.circle-left,
+.circle-right {
+  height: 700px;
+  width: 700px;
+  border: 1px dashed var(--color-light);
+  border-radius: 50%;
+  opacity: 0.2;
+  position: fixed;
+  z-index: -9998;
+  animation: loopingcircle 90s linear infinite;
+}
+
+@keyframes loopingcircle {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle-left {
+  top: -40%;
+  left: -20%;
+}
+
+.circle-right {
+  bottom: -40%;
+  right: -20%;
 }
