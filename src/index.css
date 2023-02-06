@@ -12,6 +12,7 @@
 :root {
   --color-dark: #050505;
   --color-light: #f7f7f7;
+  --color-accent: #22d3ee;
 }
 
 html,
@@ -122,4 +123,48 @@ body {
 .circle-right {
   bottom: -40%;
   right: -20%;
+}
+
+.section-title {
+  font-family: "Cosi Azure", sans-serif;
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.skill {
+  position: relative;
+}
+
+.skill::before,
+.skill::after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-light);
+}
+
+.skill::before {
+  width: 0%;
+  opacity: 0.2;
+  transition: 1.5s;
+}
+
+.skill::after {
+  width: 0;
+  background-color: var(--color-accent);
+  transition: 0.5s;
+}
+
+.skill:hover::after {
+  width: 100%;
+}
+
+.skill-count {
+  font-size: 5rem;
+}
+
+.skill-title {
+  font-size: 2rem;
 }
