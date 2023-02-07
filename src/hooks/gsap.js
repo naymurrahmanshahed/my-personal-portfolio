@@ -25,3 +25,95 @@ export const useLinkItemReveal = (items) => {
     );
   }, [items]);
 };
+
+export const useHeroImgReveal = (item) => {
+  useEffect(() => {
+    const el = item.current;
+    gsap.fromTo(
+      el,
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        duration: 2,
+        ease: "power4.out",
+        delay: 1,
+      }
+    );
+  }, [item]);
+};
+
+export const useShutterLeftReveal = (item) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: -500,
+      },
+      {
+        x: 0,
+        duration: 1,
+        ease: "power4.out",
+        delay: 1.5,
+      }
+    );
+  }, [item]);
+};
+export const useShutterRightReveal = (item) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: 500,
+      },
+      {
+        x: 0,
+        duration: 1,
+        delay: 1.5,
+        ease: "power4.out",
+      }
+    );
+  }, [item]);
+};
+
+export const useBioReveal = (item) => {
+  useEffect(() => {
+    let el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        y: 500,
+      },
+      {
+        y: 0,
+        duration: 1.5,
+        delay: 2,
+        ease: "power4.out",
+      }
+    );
+  }, [item]);
+};
+
+export const useSocialReveal = (item) => {
+  useEffect(() => {
+    let el = item.current;
+    gsap.fromTo(
+      el,
+      {
+        x: -500,
+      },
+      {
+        x: 0,
+        duration: 1.5,
+        delay: 2,
+        ease: "power4.out",
+      }
+    );
+  }, [item]);
+};

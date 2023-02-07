@@ -1,5 +1,7 @@
+import { useRef } from "react";
 import { BsFacebook, BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
+import { useSocialReveal } from "../hooks/gsap";
 
 const data = [
   {
@@ -22,8 +24,14 @@ const data = [
 ];
 
 const Socials = () => {
+  const socialRef = useRef(null);
+
+  useSocialReveal(socialRef);
   return (
-    <div className="flex flex-col gap-10 fixed left-5 text-white/50 bottom-5 bg-black/30 p-3 backdrop-blur-xl z-50">
+    <div
+      className="flex flex-col gap-10 fixed left-5 text-white/50 bottom-5 bg-black/30 p-3 backdrop-blur-xl z-50"
+      ref={socialRef}
+    >
       {data.map((social) => (
         <a
           href={social.url}
