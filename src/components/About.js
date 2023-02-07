@@ -11,7 +11,7 @@ const About = () => {
   const aboutLeftRef = useRef(null);
   useHoverEffect(aboutLeftRef, data.img1, data.img2);
   return (
-    <div className="container mx-auto mt-10">
+    <div className="container mx-auto mt-20">
       <SectionTitle title={"About"} />
       <div className="about-container mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 overflow-hidden ">
         <div className="about-left" ref={aboutLeftRef}></div>
@@ -23,9 +23,9 @@ const About = () => {
             strong understanding of front-end development and the ability to
             bring ideas to life through clean and well-designed code. <br />
             <br /> I am constantly learning and staying up to date with the
-            latest web technologies to provide the best solutions for my
-            clients. Whether working on a large-scale project or a smaller task,
-            I always strive to deliver high-quality results in a timely manner.
+            latest web technologies. Whether working on a large-scale project or
+            a smaller task, I always strive to deliver high-quality results in a
+            timely manner.
           </p>
           <a
             href="https://www.google.com"
