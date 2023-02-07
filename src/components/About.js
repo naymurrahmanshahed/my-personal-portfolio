@@ -11,7 +11,7 @@ const About = () => {
   const aboutLeftRef = useRef(null);
   useHoverEffect(aboutLeftRef, data.img1, data.img2);
   return (
-    <div className="container mx-auto mt-20">
+    <div className="container mx-auto mt-20" id="about">
       <SectionTitle title={"About"} />
       <div className="about-container mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 overflow-hidden ">
         <div className="about-left" ref={aboutLeftRef}></div>

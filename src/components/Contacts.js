@@ -2,7 +2,7 @@ import SectionTitle from "./SectionTitle";
 
 const Contacts = () => {
   return (
-    <div className="container mt-20 mx-auto">
+    <div className="container mt-20 mx-auto" id="contacts">
       <SectionTitle title={"Contacts"} />
       <form className="mt-10 grid grid-cols-2 gap-20">
         <div className="from-control overflow-hidden">

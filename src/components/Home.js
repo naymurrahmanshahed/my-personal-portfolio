@@ -7,7 +7,7 @@ import Skills from "./Skills";
 
 const Home = () => {
   return (
-    <div>
+    <div id="home">
       <Hero />
       <Bio />
       <Projects />
