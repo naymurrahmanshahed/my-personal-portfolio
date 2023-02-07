@@ -59,7 +59,7 @@ const Skills = () => {
                   <span className="skill-count text-white/60">
                     {String(skill.id).padStart(2, 0).padEnd(3, ".")}
                   </span>
-                  <span className="skill-title">{skill.skillTitle}</span>
+                  <span className="skill-title ml-10">{skill.skillTitle}</span>
                 </div>
               </li>
             ))}
@@ -73,7 +73,7 @@ const Skills = () => {
                   <span className="skill-count text-white/60">
                     {String(skill.id).padStart(2, 0).padEnd(3, ".")}
                   </span>
-                  <span className="skill-title">{skill.skillTitle}</span>
+                  <span className="skill-title ml-10">{skill.skillTitle}</span>
                 </div>
               </li>
             ))}
