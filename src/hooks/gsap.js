@@ -117,3 +117,45 @@ export const useSocialReveal = (item) => {
     );
   }, [item]);
 };
+
+export const useSectionTitleReveal = (item) => {
+  useEffect(() => {
+    let el = item.current;
+    gsap.fromTo(
+      el,
+      {
+        x: -500,
+      },
+      {
+        x: 0,
+        duration: 1.5,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, [item]);
+};
+
+export const useProjectLeftRightReveal = (items) => {
+  useEffect(() => {
+    const el = items.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: 500,
+      },
+      {
+        y: 0,
+        duration: 2,
+        ease: "power4.out",
+
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, [items]);
+};
