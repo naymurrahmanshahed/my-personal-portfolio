@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5ac3420d.css",
+    "main.js": "/static/js/main.89de4a56.js",
+    "static/media/CosiAzure-Bold.ttf": "/static/media/CosiAzure-Bold.075a131a6977ad2fce57.ttf",
+    "index.html": "/index.html",
+    "main.5ac3420d.css.map": "/static/css/main.5ac3420d.css.map",
+    "main.89de4a56.js.map": "/static/js/main.89de4a56.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ac3420d.css",
+    "static/js/main.89de4a56.js"
+  ]
+}
