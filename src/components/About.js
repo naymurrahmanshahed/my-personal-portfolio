@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useProjectLeftRightReveal } from "../hooks/gsap";
 import { useHoverEffect } from "../hooks/useHoverEffect";
 import SectionTitle from "./SectionTitle";
 
@@ -9,13 +10,17 @@ const data = {
 
 const About = () => {
   const aboutLeftRef = useRef(null);
+  const aboutRightRef = useRef(null);
+
+  const aboutsRef = [aboutLeftRef, aboutRightRef];
   useHoverEffect(aboutLeftRef, data.img1, data.img2);
+  useProjectLeftRightReveal(aboutsRef);
   return (
     <div className="container mx-auto mt-20" id="about">
       <SectionTitle title={"About"} />
       <div className="about-container mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 overflow-hidden ">
         <div className="about-left" ref={aboutLeftRef}></div>
-        <div className="about-right">
+        <div className="about-right" ref={aboutRightRef}>
           <p>
             I am a skilled React developer with a passion for creating
             user-friendly and efficient web applications. With several years of

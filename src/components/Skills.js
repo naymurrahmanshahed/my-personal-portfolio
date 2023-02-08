@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import { useSkillLineReveal, useSkillTextReveal } from "../hooks/gsap";
 import SectionTitle from "./SectionTitle";
 
 const data = [
@@ -44,6 +46,18 @@ const data = [
 ];
 
 const Skills = () => {
+  const skillItemRef = useRef([]);
+  const skillTextRef = useRef([]);
+
+  const skillItem2Ref = useRef([]);
+  const skillText2Ref = useRef([]);
+
+  useSkillLineReveal(skillItemRef.current);
+  useSkillLineReveal(skillItem2Ref.current);
+
+  useSkillTextReveal(skillTextRef.current);
+  useSkillTextReveal(skillText2Ref.current);
+
   return (
     <div className="container mx-auto mt-20" id="skills">
       <div className="section-title">
@@ -54,8 +68,15 @@ const Skills = () => {
           {data
             .filter((_, i) => i < Math.floor(data.length / 2))
             .map((skill, i) => (
-              <li key={skill.id} className="skill">
-                <div className="flex items-baseline">
+              <li
+                key={skill.id}
+                className="skill overflow-hidden"
+                ref={(el) => (skillItemRef.current[i] = el)}
+              >
+                <div
+                  className="flex items-baseline"
+                  ref={(el) => (skillTextRef.current[i] = el)}
+                >
                   <span className="skill-count text-white/60">
                     {String(skill.id).padStart(2, 0).padEnd(3, ".")}
                   </span>
@@ -68,8 +89,15 @@ const Skills = () => {
           {data
             .filter((_, i) => i >= Math.floor(data.length / 2))
             .map((skill, i) => (
-              <li key={skill.id} className="skill">
-                <div className="flex items-baseline">
+              <li
+                key={skill.id}
+                className="skill overflow-hidden"
+                ref={(el) => (skillItem2Ref.current[i] = el)}
+              >
+                <div
+                  className="flex items-baseline"
+                  ref={(el) => (skillText2Ref.current[i] = el)}
+                >
                   <span className="skill-count text-white/60">
                     {String(skill.id).padStart(2, 0).padEnd(3, ".")}
                   </span>

@@ -22,9 +22,9 @@ const Navbar = ({ footerNav }) => {
   ];
   useLinkItemReveal(linksRef);
   return (
-    <na2
+    <nav
       className={`container nav-container mx-auto flex justify-between  ${
-        footerNav ? "mt-20" : "mt-10 "
+        footerNav ? "mt-20" : "mt-10"
       } uppercase`}
     >
       <div>
@@ -70,7 +70,7 @@ const Navbar = ({ footerNav }) => {
           </a>
         </li>
       </ul>
-    </na2>
+    </nav>
   );
 };
 
