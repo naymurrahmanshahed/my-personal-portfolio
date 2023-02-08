@@ -35,8 +35,8 @@ const data = [
       "Axios",
       "Tailwind CSS",
     ],
-    liveLink: "https://tech-zone-naymurrahaman.netlify.app",
-    frontEndLink: "https://github.com/naymurrahmanshahed/tech-zone",
+    liveLink: "https://golden-pony-f9f312.netlify.app",
+    frontEndLink: "https://github.com/naymurrahmanshahed/food-mania",
   },
 ];
 
