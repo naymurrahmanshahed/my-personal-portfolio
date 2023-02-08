@@ -1,12 +1,14 @@
 import { useRef } from "react";
 import { useFromControlReveal } from "../hooks/gsap";
+import emailjs from "@emailjs/browser";
 import SectionTitle from "./SectionTitle";
 
 const Contacts = () => {
-  const fromControl1Ref = useRef();
-  const fromControl2Ref = useRef();
-  const fromControl3Ref = useRef();
-  const fromControl4Ref = useRef();
+  const fromControl1Ref = useRef(null);
+  const fromControl2Ref = useRef(null);
+  const fromControl3Ref = useRef(null);
+  const fromControl4Ref = useRef(null);
+  const formRef = useRef(null);
 
   const fromControlsRef = [
     fromControl1Ref,
@@ -16,10 +18,41 @@ const Contacts = () => {
   ];
 
   useFromControlReveal(fromControlsRef);
+
+  const sendMail = (e) => {
+    e.preventDefault();
+
+    //emailjs integration
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_PUBLIC_ID
+      )
+      .then(
+        () => {
+          console.log("Message send");
+        },
+        () => {
+          console.log("Message can not send");
+        }
+      );
+
+    // reset
+    e.target.querySelector(".name").value = "";
+    e.target.querySelector(".email").value = "";
+    e.target.querySelector(".message").value = "";
+  };
+
   return (
     <div className="container mt-20 mx-auto" id="contacts">
       <SectionTitle title={"Contacts"} />
-      <form className="mt-10 grid grid-cols-2 gap-20 overflow-hidden">
+      <form
+        onSubmit={sendMail}
+        className="mt-10 grid grid-cols-2 gap-20 overflow-hidden"
+        ref={formRef}
+      >
         <div className="from-control overflow-hidden">
           <input
             type="text"
