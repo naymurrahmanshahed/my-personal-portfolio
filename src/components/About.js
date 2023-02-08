@@ -16,9 +16,9 @@ const About = () => {
   useHoverEffect(aboutLeftRef, data.img1, data.img2);
   useProjectLeftRightReveal(aboutsRef);
   return (
-    <div className="container mx-auto mt-20" id="about">
+    <div className="container mx-auto mt-20 2xl:mt-40" id="about">
       <SectionTitle title={"About"} />
-      <div className="about-container mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 overflow-hidden ">
+      <div className="about-container mt-10 2xl:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10 overflow-hidden ">
         <div className="about-left" ref={aboutLeftRef}></div>
         <div className="about-right" ref={aboutRightRef}>
           <p>

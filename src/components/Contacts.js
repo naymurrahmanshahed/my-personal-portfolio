@@ -46,7 +46,7 @@ const Contacts = () => {
   };
 
   return (
-    <div className="container mt-20 mx-auto" id="contacts">
+    <div className="container mt-20 2xl:mt-40 mx-auto" id="contacts">
       <SectionTitle title={"Contacts"} />
       <form
         onSubmit={sendMail}

@@ -21,7 +21,7 @@ const Hero = () => {
   useShutterRightReveal(rightShutterRef);
   return (
     <div
-      className="hero container mx-auto mt-8  flex  justify-center items-center overflow-hidden"
+      className="hero container mx-auto mt-8 2xl:mt-20  flex  justify-center items-center overflow-hidden"
       id="hero"
     >
       <div className="hero-img" ref={heroImgRef}></div>

@@ -12,7 +12,7 @@ const Project = ({ project }) => {
   useHoverEffect(projectRightRef, project.img1, project.img2);
   useProjectLeftRightReveal(projectsRef);
   return (
-    <div className="project grid grid-cols-5  overflow-hidden ">
+    <div className="project grid grid-cols-1 xl:grid-cols-5   overflow-hidden ">
       <div
         className="project-left  col-span-3 flex flex-col gap-10 "
         ref={projectLeftRef}
@@ -24,7 +24,7 @@ const Project = ({ project }) => {
           {project.projectTitle}
         </h3>
         <p className="text-white/75">{project.description}</p>
-        <div className="project-btn flex gap-6">
+        <div className="project-btn flex gap-6 mb-10">
           <a
             href={project.liveLink}
             className="px-12 py-7 rounded-full border border-white/20 inline-block  hover:bg-cyan-700/20 hover:border-cyan-700/20  "
@@ -44,7 +44,7 @@ const Project = ({ project }) => {
         </div>
       </div>
       <div
-        className="project-right col-span-2 justify-self-end"
+        className="project-right col-span-2 justify-self-start xl:justify-self-end"
         ref={projectRightRef}
       ></div>
     </div>
