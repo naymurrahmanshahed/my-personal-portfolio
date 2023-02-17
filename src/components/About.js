@@ -36,7 +36,7 @@ const About = () => {
             href="https://docs.google.com/document/d/1KaATjjBdCLiKvjFGgkfghRmjU2-qy_EA/edit?usp=sharing&ouid=118393996409934603848&rtpof=true&sd=true"
             target="_blank"
             rel="noreferrer"
-            className="inline-block mt-10 uppercase py-8 px-14 border border-white/20 rounded-full hover:bg-cyan-400/20 hover:border-cyan-400/20 duration-500"
+            className="inline-block mt-10 text-[1.3rem] uppercase py-8 px-14 border border-white/20 rounded-full hover:bg-cyan-400/20 hover:border-cyan-400/20 duration-500"
           >
             My Resume
           </a>

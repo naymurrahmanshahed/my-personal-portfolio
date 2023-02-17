@@ -59,11 +59,11 @@ const Skills = () => {
   useSkillTextReveal(skillText2Ref.current);
 
   return (
-    <div className="container mx-auto mt-20 2xl:mt-40" id="skills">
+    <div className="container mx-auto mt-40 2xl:mt-40" id="skills">
       <div className="section-title">
         <SectionTitle title={"Skills"} />
       </div>
-      <div className="skill-container grid grid-cols-2 gap-10 mt-10">
+      <div className="skill-container grid grid-cols-1 xl:grid-cols-2 xl:gap-10 gap-0 mt-20">
         <ul className="skill-left">
           {data
             .filter((_, i) => i < Math.floor(data.length / 2))

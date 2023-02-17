@@ -249,10 +249,16 @@ body {
   .shutter-left {
     transform: translateX(50%);
   }
+  .section-title {
+    font-size: 6rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .shutter {
+    font-size: 4rem;
+  }
+  .section-title {
     font-size: 4rem;
   }
   .hero-img {

@@ -42,11 +42,11 @@ const data = [
 
 const Projects = () => {
   return (
-    <div className="container mx-auto mt-10 2xl:mt-40">
+    <div className="container mx-auto mt-20 2xl:mt-40">
       <div className="section-title">
         <SectionTitle title={"projects"} />
       </div>
-      <div className="project-wrapper mt-20 flex flex-col gap-20">
+      <div className="project-wrapper mt-20  2xl:mt-40 flex flex-col gap-20">
         {data.map((project) => (
           <Project project={project} key={project.id} />
         ))}
