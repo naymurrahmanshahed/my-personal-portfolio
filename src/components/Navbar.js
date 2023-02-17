@@ -23,7 +23,7 @@ const Navbar = ({ footerNav }) => {
   useLinkItemReveal(linksRef);
   return (
     <nav
-      className={`container nav-container mx-auto flex justify-between  ${
+      className={`container nav-container mx-auto flex flex-col md:items-start md:gap-0 gap-10 items-center md:flex-row md:justify-between  ${
         footerNav ? "mt-20" : "mt-10 2xl:mt-20"
       } uppercase`}
     >
@@ -32,7 +32,7 @@ const Navbar = ({ footerNav }) => {
           {footerNav ? "Go To Top" : "Naymur Rahman"}
         </HashLink>
       </div>
-      <ul className="links flex flex-col gap-2">
+      <ul className="links flex md:flex-col flex-row  gap-2 md:gap-2 text-[0.7rem] md:text-[1.5rem]">
         <li>
           <HashLink smooth to="#home" className="link-item" ref={link2Ref}>
             Home
