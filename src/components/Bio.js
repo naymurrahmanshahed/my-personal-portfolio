@@ -7,7 +7,7 @@ const Bio = () => {
   useBioReveal(bioRef);
 
   return (
-    <div className="container mx-auto mt-8 2xl:mt-20 overflow-hidden">
+    <div className="container mx-auto mt-8 text-justify 2xl:mt-20 overflow-hidden">
       <p ref={bioRef}>
         I am a React developer with a passion for delivering high-quality web
         applications. Skilled in using latest technologies and a team player who
