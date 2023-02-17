@@ -50,7 +50,7 @@ const Contacts = () => {
       <SectionTitle title={"Contacts"} />
       <form
         onSubmit={sendMail}
-        className="mt-10 grid grid-cols-2 gap-20 overflow-hidden"
+        className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-20 overflow-hidden"
         ref={formRef}
       >
         <div className="from-control overflow-hidden">
@@ -59,7 +59,7 @@ const Contacts = () => {
             placeholder="Write your name"
             name="name"
             required
-            className="name bg-transparent border py-12 px-20 rounded-full border-white/20 outline-none focus:border-cyan-400 duration-500 w-full"
+            className="name bg-transparent border py-12 px-25 text-center rounded-full border-white/20 outline-none focus:border-cyan-400 duration-500 w-full"
             ref={fromControl1Ref}
           />
         </div>
@@ -69,7 +69,7 @@ const Contacts = () => {
             placeholder="Write your email"
             name="email"
             required
-            className="email bg-transparent border py-12 px-20 rounded-full border-white/20 outline-none focus:border-cyan-400 duration-500 w-full"
+            className="email bg-transparent border py-12 px-25 text-center rounded-full border-white/20 outline-none focus:border-cyan-400 duration-500 w-full"
             ref={fromControl2Ref}
           />
         </div>
@@ -80,7 +80,7 @@ const Contacts = () => {
             required
             rows="1"
             cols="30"
-            className="message bg-transparent border py-12 px-20 rounded-full border-white/20 outline-none focus:border-cyan-400 duration-500 w-full resize-none"
+            className="message bg-transparent border py-12 px-25  text-center rounded-full border-white/20 outline-none focus:border-cyan-400 duration-500 w-full resize-none"
             ref={fromControl3Ref}
           />
         </div>
@@ -88,7 +88,7 @@ const Contacts = () => {
           <input
             type="submit"
             value="Send message"
-            className="uppercase border py-12 px-20 rounded-full border-white/20 hover:bg-cyan-400/20 hover:border-cyan-400/20 duration-500 w-full"
+            className="uppercase border py-12 px-25 rounded-full border-white/20 hover:bg-cyan-400/20 hover:border-cyan-400/20 duration-500 w-full"
             ref={fromControl4Ref}
           />
         </div>

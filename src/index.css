@@ -261,6 +261,13 @@ body {
   .section-title {
     font-size: 4rem;
   }
+  .skill-count {
+    font-size: 4.5rem;
+  }
+
+  .skill-title {
+    font-size: 2rem;
+  }
   .hero-img {
     height: 300px;
     width: 300px;
