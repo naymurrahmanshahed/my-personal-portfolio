@@ -24,7 +24,7 @@ const Project = ({ project }) => {
           {project.projectTitle}
         </h3>
         <p className="text-white/75">{project.description}</p>
-        <div className="project-btn flex gap-6 mb-10">
+        <div className="project-btn flex-col flex gap-5 md:flex-row md:gap-6 mb-10">
           <a
             href={project.liveLink}
             className="px-12 py-7 text-[1.3rem] text-center rounded-full border border-white/20 inline-block  hover:bg-cyan-700/20 hover:border-cyan-700/20  "
@@ -35,7 +35,7 @@ const Project = ({ project }) => {
           </a>
           <a
             href={project.frontEndLink}
-            className="px-12 py-7 text-[1.3rem] text-center rounded-full border border-white/20 inline-block  hover:bg-cyan-700/20 hover:border-cyan-700/20"
+            className="px-12 py-7 text-[1.3rem] text-center rounded-full border border-white/20 inline-block  hover:bg-cyan-700/20 hover:border-cyan-700/20 "
             target="_blank"
             rel="noreferrer"
           >
