@@ -21,23 +21,18 @@ const Contacts = () => {
 
   const sendMail = (e) => {
     e.preventDefault();
-
+    const serviceId = process.env.REACT_APP_SERVICE_ID;
+    const templateId = process.env.REACT_APP_TEMPLATE_ID;
+    const publicId = process.env.REACT_APP_PUBLIC_ID;
     //emailjs integration
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        formRef.current,
-        process.env.REACT_APP_PUBLIC_ID
-      )
-      .then(
-        () => {
-          console.log("Message send");
-        },
-        () => {
-          console.log("Message can not send");
-        }
-      );
+    emailjs.sendForm(serviceId, templateId, formRef.current, publicId).then(
+      () => {
+        console.log("Message send");
+      },
+      () => {
+        console.log("Message can not send");
+      }
+    );
 
     // reset
     e.target.querySelector(".name").value = "";

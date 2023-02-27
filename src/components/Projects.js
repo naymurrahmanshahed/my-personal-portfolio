@@ -42,7 +42,7 @@ const data = [
 
 const Projects = () => {
   return (
-    <div className="container mx-auto mt-20 2xl:mt-40">
+    <div className="container mx-auto mt-20 2xl:mt-40" id="project">
       <div className="section-title">
         <SectionTitle title={"projects"} />
       </div>
